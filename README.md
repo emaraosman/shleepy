@@ -1,4 +1,4 @@
-# sleepPhrase
+# shleepy
 An interactive software designed to help induce sleep through cognitive shuffling.
 
 User Story: 
