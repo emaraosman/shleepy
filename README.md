@@ -39,3 +39,7 @@ Links and Resources
 
 
 Journal source: http://summit.sfu.ca/item/12143
+
+Cognitive Shuffle explanation: https://mysleepbutton.com/support/do-it-yourself-cognitive-shuffle-sdi/
+
+Related News: http://www.cbc.ca/news/canada/british-columbia/sfu-sleep-trick-luc-beaudoin-1.4092294 
