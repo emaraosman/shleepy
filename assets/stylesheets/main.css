@@ -1,0 +1,137 @@
+/*body{
+  background-color: black;
+}
+
+.header-background{
+  background-image: linear-gradient(to bottom right, #1380BF 0%, #501C73 100%);
+}*/
+
+body {
+  background-color: white;
+  font-family: "Poiret One", cursive;
+  font-weight: 300;
+  height: 100%;
+}
+
+html{
+  height:100%;
+}
+
+.header-background {
+
+	z-index: 0;
+	background: url("https://media.giphy.com/media/d2Z7wetTpiqlmjq8/giphy.gif") center center;
+	background-size: cover;
+	height: 100%;
+	/*filter: blur(6.3px);*/
+  /*overflow: hidden;*/
+
+
+}
+/* Thanks motion addicts for this awesome background, im using it non-commercially
+http://www.motionaddicts.com/post/157687589014/motionaddicts-sleep
+*/
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.7);
+}
+
+header {
+	width: 100%;
+	position: absolute;
+  height:100%;
+	z-index: 2;
+  background-image: linear-gradient(to top left, rgba(86,12,135,0.8) 0%, rgba(10,98,125,0.8) 100%);
+
+
+}
+
+
+.title {
+  color: white;
+  font: 800 60px "Lato";
+  text-align: center;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px;
+  /*width: 200px;
+  height: 200px;
+  vertical-align: middle;
+	/*transition: all 0.35s ease;*/
+  /*background-color: green;
+  border-radius: 50%;*/
+  font-weight: 400;
+  font-family: "Modak",cursive;
+  color: white;
+
+  background-image: linear-gradient(to top left, rgba(194,83,250,1) 0%, rgba(235,206,92,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.circle {
+  text-align: center;
+  width: 220px;
+  height: 220px;
+  vertical-align: middle;
+	/*transition: all 0.35s ease;*/
+  background-image: linear-gradient(to top left, rgba(82,171,209,0.1) 0%, rgba(31,235,146,0.6) 100%);
+  border-radius: 50%;
+  margin: 0 auto;
+  transform: rotate(-20deg);
+  box-shadow: 0px 2px 12px 2px rgba(0,0,0,0.4);
+}
+
+.start-button {
+  font-size: 30px;
+  height: 50px;
+  width: 150px;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 170px;
+  padding-top:15px;
+  border-radius: 10px;
+  background-image: linear-gradient(to top left, rgba(82,171,209,.8) 0%, rgba(31,235,146,0.6) 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1166px){
+
+  .user-bio {
+
+    font: 300 20px "Lato";
+
+  }
+
+  .user-photo {
+    width: 23vmax;
+    height: 23vmax;
+  }
+
+  .user-bio {
+    margin-top: 2vh;
+  }
+
+	#start-button{
+
+		margin-top: 60vmin;
+
+	}
+
+}
