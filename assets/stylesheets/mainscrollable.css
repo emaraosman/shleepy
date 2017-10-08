@@ -25,7 +25,10 @@ html{
   font-size: 180px;
 	/*background: url("https://media.giphy.com/media/d2Z7wetTpiqlmjq8/giphy.gif") center center;*/
 	background-size: cover;
-	height: 100%;
+  background-repeat: no-repeat;
+	height: auto;
+  min-height: 100vh;
+
 	/*filter: blur(6.3px);*/
   /*overflow: hidden;*/
 
@@ -36,7 +39,9 @@ html{
   position: absolute;
   /*top: -50%;*/
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 100vh;
+  min-height: 100vh;
   text-align: center;
   font-size: 100px;
   opacity: 0.2;
@@ -46,7 +51,8 @@ html{
 
 .overlay {
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   position: absolute;
   z-index: 1;
   background-color: rgba(0,0,0,0.7);
@@ -55,10 +61,10 @@ html{
 header {
 	width: 100%;
 	position: absolute;
-  height:100%;
+  min-height: 100vh;
+  height:auto;
 	z-index: 2;
   background-image: linear-gradient(to top left, rgba(86,12,135,0.8) 0%, rgba(10,98,125,0.8) 100%);
-
 
 }
 
@@ -126,7 +132,10 @@ a {
   /*margin: 0 auto;*/
   text-align: center;
   width: 100%;
-  overflow: hidden;
+  height: auto;
+  min-height: 100vh
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .word-list{
@@ -154,7 +163,8 @@ a {
   /*text-align: center;*/
   width:100%;
   animation-delay: 0.2s;
-  height: 100%;
+  min-height: 100vh;
+  height: auto;
   padding: 20px 20px 20px 20px;
   box-sizing: border-box;
 }
@@ -170,16 +180,14 @@ a {
 
 .letter-box{
   flex: 1;
+  font-size: 10vh;
   color: rgba(183, 255, 215,1);
   /*border: 1px solid white;*/
   align-items: center;
   justify-content: center;
-  align-content: center;
-  vertical-align: top;
 }
 
 .letter {
-  font-size: 5vh;
   width: 60px;
   margin-left: 20px;
   display: inline-block;
@@ -193,12 +201,8 @@ a {
   display: inline-block;
   margin-left: 40px;
   width: 150px;
-  height: 30px;
+  height: 40px;
   vertical-align: bottom;
-  background-color: rgba(0,0,0,0.0);
-  border: none;
-  border-bottom: 3px solid rgba(183, 255, 215,1);
-
 }
 
 .submit-word{

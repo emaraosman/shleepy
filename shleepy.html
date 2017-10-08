@@ -7,6 +7,12 @@
 <link href="https://fonts.googleapis.com/css?family=Modak|Poiret+One" rel="stylesheet">
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/script.js"></script>
+    <!--
+THIS IS NOT USED, in here incase
+    <script src="assets/js/fittext.js"></script>
+  THANKS FOLKS AT FITTEXT for making your stuff on a WTFPL license!
+-->
+
     <link rel="stylesheet" href="assets/stylesheets/reset.css">
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <title>Shleepy</title>
@@ -16,7 +22,7 @@
 
     	z-index: 0;
     	background-size: cover;
-    	height: 100%;
+    	height: auto;
     	/*filter: blur(4.3px);*/
       /*overflow: hidden;*/
 
@@ -44,6 +50,7 @@
       animation-delay: 1.4s;
     }
 
+
     </style>
   </head>
   <body>
@@ -53,15 +60,19 @@
 
 
     <div id="word-list-container">
-      <p class="word-list word1 animated fadeInRight">word1</p>
-      <p class="word-list word2 animated fadeInRight">word2</p>
-      <p class="word-list word3 animated fadeInRight">word3</p>
+      <p class="word-list word1 animated fadeInRight ">longwordhello</p>
+      <p class="word-list word2 animated fadeInRight">insecticide</p>
+      <p class="word-list word3 animated fadeInRight">automatically</p>
       <p class="word-list word4 animated fadeInRight">word4</p>
       <p class="word-list word5 animated fadeInRight">word5</p>
       <p class="word-list word6 animated fadeInRight">word6</p>
       <p class="word-list word7 animated fadeInRight">word7</p>
     </div>
 
+  <div id="game-board" class="animated fadeInLeft">
+  <div id="letter-stack"></div>
+
+  </div>
 
 
 
