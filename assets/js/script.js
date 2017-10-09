@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     wordArray.forEach(function(item){
       $("#game-board #letter-stack").append(
-        $(`<div class="letter-box" style="height:calc(99%/${wordArray.length})"></div>`)
+        $(`<div class="letter-box" style="height:calc(99%/${wordArray.length}); min-height:calc(99%/${wordArray.length})"></div>`)
         .append(`<div class="letter">${item}</div>`)
         // .append(`<form action="enterToSubmit()"> <input class="word" type="text" name="word" value="${item}" maxlength="9"> </form>`)
         .append(` <input class="word" type="text" name="word" value="${item}" maxlength="9">`)
