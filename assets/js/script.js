@@ -23,7 +23,7 @@ $(document).ready(function(){
     $("#game-board").append("<div id='new-list-button'>new list</div>");
   });
 
-
+//SUBMIT BUTTON:
  $(document).ready(function(){
   $("body").on("click",".submit-word", function(){
     wordUp = $(this).prev().val();
@@ -33,10 +33,11 @@ $(document).ready(function(){
   });
 });
 
-
+//CREATE NEW WORD LIST BUTTON
 $(document).ready(function(){
   $("body").on("click","#new-list-button",function(){
-        // $("#game-board").empty(); FIND SOMEWHERE FOR THIS
+
+    $("#letter-stack").empty();
     $("#game-board").fadeOut();
     $("#word-list-container").empty();
     submitArray.forEach(function(item){
@@ -45,6 +46,7 @@ $(document).ready(function(){
       );
     })
     $("#word-list-container").fadeIn()
+    submitArray = [];
   })
 })
 
