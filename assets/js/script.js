@@ -1,4 +1,22 @@
 $(document).ready(function(){
+
+  // Create list of words array to choose from during random word generation sequences
+
+  starterPack = ["bat", " bed", " boy", " bun", " can", " cake", " cap", " car", " cat", " cow", " cub", " cup", " dad", " day", " dog", " dust", " fan", " hat", " hen",
+  "jar", " kite", " map", " pan", " pet", " pie", " pig", " pot", " rat", " sun", " toe", " tub", " van", "bike", "bird", "chin", "clam", "class", "clover", "club", "corn", "crayon", "crow", "crown", "crowd", "crib", "desk", "dime", "dirt", "fang", "field", "flag", "flower",
+   "fog", "game", "heat", "home", "horn", "hose", "joke", "juice", "kite", "lake", "maid", "mask", "mice", "milk", "mint", "meal", "meat", "nest", "nose", "pear"
+   , "pen", "plant", "rain", "river", "road", "rock", "room", "rose", "shape", "shoe", "shop", "show", "sink", "snail", "snake", "snow", "soda", "sofa", "star", "step", "stew", "stove", "straw", "string", "swing", "table", "tank", "team", "tent", "test", "toes", "vest", "water", "wing", "winter"]
+
+//Random word generator function used to fill emply word-lists should they ever appear empty or less than 7
+  function randomWordGenerator () {
+    var randomWord = starterPack[Math.floor(Math.random() * starterPack.length)];
+    console.log(randomWord);
+
+  }
+
+
+
+
   console.log('jq working')
   submitArray = [];
   wordUp="";
@@ -49,7 +67,6 @@ $(document).ready(function(){
     submitArray = [];
   })
 })
-
 
 
 
