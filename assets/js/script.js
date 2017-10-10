@@ -25,18 +25,19 @@ $(document).ready(function() {
   }
 
 
-  //Populates wordList variable with array of words to feed word-list-container and create list of words to choose from
+//Populates wordList variable with array of words to feed word-list-container and create list of words to choose from
   function populateWordList() {
     let wordCounter = wordList.length
+//wordList dynamic populator: this accounts for whether word list is less than 7 but not always 0 or some predefined value
     if (wordList.length < 7) {
-      for (let i = 0; i < (7 - wordCounter); i++) { // this accounts for whether word list is less than 7 but not always 0 or some predefined value
+      for (let i = 0; i < (7 - wordCounter); i++) {
         wordList.push(randomWordGenerator());
       }
       wordList.forEach(function(item) {
         $("#word-list-container").append($(`<p class="word-list word1 animated fadeInRight">${item}</p>`))
       });
     }
-    // If the submitArray becomes longer than 7 elements we only take the first 7 to submit.
+// If the submitArray becomes longer than 7 elements we only take the first 7 to submit.
     else if (wordList.length > 7) {
       wordList = wordList.splice(0, 7)
 
