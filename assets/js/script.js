@@ -15,19 +15,28 @@ $(document).ready(function() {
     "pen", "plant", "rain", "river", "road", "rock", "room", "rose", "shape", "shoe", "shop", "show", "sink", "snail", "snake", "snow", "soda", "sofa", "star", "step",
     "stew", "stove", "straw", "string", "swing", "table", "tank", "team", "tent", "test", "toes", "vest", "water", "wing", "winter"
   ]
-  //  randomWordGenerator()
+
+
+////////////////////////////////////////////
+//TIMER FUNCTIONALITY
+//
+//Timer below is set from the start of the page load
+//timer is reset to 5 minutes everytime the submit-word button is pressed.
+
 let time = 300000; // 5 minutes
 
 var timerId = setTimeout(function(){
   console.log("you win")
+  $("#win-screen").fadeIn()
 },time)
 
-$("body").on("click","input",function(){
+$("body").on("click",".submit-word",function(){
   console.log("reset timer")
   clearInterval(timerId)
   time = 300000;
   timerId = setTimeout(function(){
     console.log("you win")
+    $("#win-screen").fadeIn()
   },time);
 
 });
@@ -99,7 +108,9 @@ $("body").on("click","input",function(){
 
   populateWordList()
 
-
+//||||||||||||||||||||||||||||||||||||||
+//DIV GENERATOR
+//This block of code below generates the input fields
   $("body").on('click', '.word-list', function() {
     $("#word-list-container").fadeOut();
     $("#game-board").fadeIn();

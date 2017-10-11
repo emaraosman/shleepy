@@ -59,7 +59,28 @@ header {
 	z-index: 2;
   background-image: linear-gradient(to top left, rgba(86,12,135,0.8) 0%, rgba(10,98,125,0.8) 100%);
 
+}
 
+#win-screen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display:none;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 3;
+  /*this is highest level z-index*/
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.win-screen-text {
+  color: rgba(43, 113, 226, 1);
+  text-align: center;
+  font-family: "Modak",cursive;
+  font-size: 50px;
+  padding-top: 70px;
+  animation-delay: 1s;
+  /*text-shadow: 2px 1px white;*/
 }
 
 
@@ -106,6 +127,7 @@ header {
   background-image: linear-gradient(to top left, rgba(82,171,209,0.8) 0%, rgba(31,235,146,0.6) 100%);
   box-shadow: 0px 2px 12px 2px rgba(0,0,0,0.6);
   transition: 0.2s;
+  animation-delay: 1s;
 }
 
 a {
