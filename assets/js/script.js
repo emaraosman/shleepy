@@ -17,61 +17,37 @@ $(document).ready(function() {
   ]
 
 
-////////////////////////////////////////////
-//TIMER FUNCTIONALITY
-//
-//Timer below is set from the start of the page load
-//timer is reset to 5 minutes everytime the submit-word button is pressed.
+  ////////////////////////////////////////////
+  //TIMER FUNCTIONALITY
+  //
+  //Timer below is set from the start of the page load
+  //timer is reset to 5 minutes everytime the submit-word button is pressed.
 
-let time = 300000; // 5 minutes
+  let time = 300000; // 5 minutes
 
-var timerId = setTimeout(function(){
-  console.log("you win")
-  $("#win-screen").fadeIn()
-},time)
-
-$("body").on("click",".submit-word",function(){
-  console.log("reset timer")
-  clearInterval(timerId)
-  time = 300000;
-  timerId = setTimeout(function(){
+  var timerId = setTimeout(function() {
     console.log("you win")
     $("#win-screen").fadeIn()
-  },time);
+  }, time)
 
-});
+  $("body").on("click", ".submit-word", function() {
+    console.log("reset timer")
+    clearInterval(timerId)
+    time = 300000;
+    timerId = setTimeout(function() {
+      console.log("you win")
+      $("#win-screen").fadeIn()
+    }, time);
 
-// $("input").on("click",function(){
-//     time = 5000;
-// }))else{
-//
-// }
+  });
 
-// setInterval(function(){
-//   if($("input").click()){
-//     console.log("stillplaying")
-//     time = 5000;
-//   }else{
-//     console.log("gameover")
-//   }
-//  }, time);
+  $("body").on("click", ".submit-word", function() {
+    $("#wait-screen").fadeIn();
+    setTimeout(function(){
+      $("#wait-screen").fadeOut();
+    },3000)
 
-  // setInterval(function(){
-  //   if($("input").is(":focus")){
-  //     console.log('still playing')
-  //     time = 5000
-  //   } else {
-  //     window.alert('hello')
-  //     clearInterval();
-  //   }
-  //   console.log('bbbbbbbb')
-  //  }, time);
-
-
-
-
-
-
+  });
 
   //Random word generator function used to fill emply word-lists should they ever appear empty or less than 7
   function randomWordGenerator() {
@@ -81,10 +57,10 @@ $("body").on("click",".submit-word",function(){
   }
 
 
-//Populates wordList variable with array of words to feed word-list-container and create list of words to choose from
+  //Populates wordList variable with array of words to feed word-list-container and create list of words to choose from
   function populateWordList() {
     let wordCounter = wordList.length
-//wordList dynamic populator: this accounts for whether word list is less than 7 but not always 0 or some predefined value
+    //wordList dynamic populator: this accounts for whether word list is less than 7 but not always 0 or some predefined value
     if (wordList.length < 7) {
       for (let i = 0; i < (7 - wordCounter); i++) {
         wordList.push(randomWordGenerator());
@@ -95,7 +71,7 @@ $("body").on("click",".submit-word",function(){
         $("#word-list-container").append($(`<p class="word-list word${tick} animated fadeInRight">${item}</p>`))
       });
     }
-// If the submitArray becomes longer than 7 elements we only take the first 7 to submit.
+    // If the submitArray becomes longer than 7 elements we only take the first 7 to submit.
     else if (wordList.length > 7) {
       wordList = wordList.splice(0, 7)
 
@@ -106,11 +82,11 @@ $("body").on("click",".submit-word",function(){
     wordList = [];
   }
 
-  populateWordList()
+  populateWordList();
 
-//||||||||||||||||||||||||||||||||||||||
-//DIV GENERATOR
-//This block of code below generates the input fields
+  //||||||||||||||||||||||||||||||||||||||
+  //DIV GENERATOR
+  //This block of code below generates the input fields
   $("body").on('click', '.word-list', function() {
     $("#word-list-container").fadeOut();
     $("#game-board").fadeIn();
@@ -137,12 +113,9 @@ $("body").on("click",".submit-word",function(){
     wordUp = $(this).prev().val();
     wordUp = wordUp.toLowerCase();
     submitArray.push(wordUp);
-    // submitArray.map(function(item){
-    //   wordList.push(sumbitArray);
-    //   return wordList;
-    // })
+
     wordList = submitArray;
-    // populateWordList();
+
     $(this).prev().val("");
   });
 

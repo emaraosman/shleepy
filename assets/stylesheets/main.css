@@ -67,7 +67,7 @@ header {
   width: 100%;
   display:none;
   background-color: rgba(0,0,0,0.7);
-  z-index: 3;
+  z-index: 4;
   /*this is highest level z-index*/
   padding-top: 100px;
   box-sizing: border-box;
@@ -80,6 +80,29 @@ header {
   font-size: 50px;
   padding-top: 70px;
   animation-delay: 1s;
+  /*text-shadow: 2px 1px white;*/
+}
+
+
+#wait-screen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display:none;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 3;
+  /*this is second highest level z-index*/
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.wait-screen-text {
+  color: rgba(43, 113, 226, 1);
+  text-align: center;
+  font-family: "Modak",cursive;
+  font-size: 50px;
+  padding-top: 50%;
+  animation-delay: .3s;
   /*text-shadow: 2px 1px white;*/
 }
 
@@ -302,33 +325,8 @@ a {
 
 
 
+/*@media only screen and (max-width: 1166px){
 
 
 
-
-
-
-@media only screen and (max-width: 1166px){
-
-  .user-bio {
-
-    font: 300 20px "Lato";
-
-  }
-
-  .user-photo {
-    width: 23vmax;
-    height: 23vmax;
-  }
-
-  .user-bio {
-    margin-top: 2vh;
-  }
-
-	#start-button{
-
-		margin-top: 60vmin;
-
-	}
-
-}
+}*/
