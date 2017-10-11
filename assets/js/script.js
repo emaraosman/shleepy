@@ -41,13 +41,27 @@ $(document).ready(function() {
 
   });
 
-  $("body").on("click", ".submit-word", function() {
-    $("#wait-screen").fadeIn();
-    setTimeout(function(){
-      $("#wait-screen").fadeOut();
-    },3000)
+/////////////////////////////////////////////
+//waitScreen functionality:
+//creates loading screen each time submit-word button is pressed
+//
+//this function is called later on as a side effect of submit-word button
+//
+  function waitScreen() {
+      $("#wait-screen").fadeIn();
+      setTimeout(function() {
+        $("#wait-screen").fadeOut();
+      }, 3000);
 
-  });
+  }
+
+  function noInput() {
+      $("#no-input-screen").fadeIn();
+      setTimeout(function() {
+        $("#no-input-screen").fadeOut();
+      }, 1000);
+
+  }
 
   //Random word generator function used to fill emply word-lists should they ever appear empty or less than 7
   function randomWordGenerator() {
@@ -97,7 +111,7 @@ $(document).ready(function() {
         $(`<div class="letter-box" style="height:calc(99%/${wordArray.length}); min-height:calc(99%/${wordArray.length})"></div>`)
         .append(`<div class="letter">${item}</div>`)
         // .append(`<form action="enterToSubmit()"> <input class="word" type="text" name="word" value="${item}" maxlength="9"> </form>`)
-        .append(` <input class="word" type="text" name="word" autocomplete='off' placeholder='start with "${item}"' maxlength="9">`)
+        .append(` <input class="word" type="text" name="word" autocomplete='off' placeholder='"${item}" words' maxlength="9">`)
         .append("<div class='submit-word'>+</div>")
         // .text(`${item}`)
 
@@ -110,13 +124,18 @@ $(document).ready(function() {
   //SUBMIT BUTTON:
 
   $("body").on("click", ".submit-word", function() {
-    wordUp = $(this).prev().val();
-    wordUp = wordUp.toLowerCase();
-    submitArray.push(wordUp);
+    if (wordUp = $(this).prev().val() == "") {
+      noInput()
+    } else {
+      waitScreen();
+      wordUp = $(this).prev().val();
+      wordUp = wordUp.toLowerCase();
+      submitArray.push(wordUp);
 
-    wordList = submitArray;
+      wordList = submitArray;
 
-    $(this).prev().val("");
+      $(this).prev().val("");
+    }
   });
 
 

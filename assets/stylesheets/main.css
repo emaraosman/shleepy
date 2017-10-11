@@ -18,7 +18,7 @@ html{
 }
 
 .header-background {
-  font-family: "Modak" cursive;
+  font-family: "Modak", cursive;
 	z-index: 0;
   font-weight: 400;
   font-family: "Modak",cursive;
@@ -101,11 +101,33 @@ header {
   text-align: center;
   font-family: "Modak",cursive;
   font-size: 50px;
-  padding-top: 50%;
+  padding-top: 25vh;
   animation-delay: .3s;
   /*text-shadow: 2px 1px white;*/
 }
 
+
+#no-input-screen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display:none;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 3;
+  /*this is second highest level z-index*/
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.no-input-screen-text {
+  color: rgb(255, 113, 38);
+  text-align: center;
+  font-family: "Modak",cursive;
+  font-size: 50px;
+  padding-top: 25vh;
+  /*animation-delay: 0.3s;*/
+  /*text-shadow: 2px 1px white;*/
+}
 
 .title {
   color: white;
