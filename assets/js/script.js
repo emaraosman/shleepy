@@ -16,21 +16,21 @@ $(document).ready(function() {
     "stew", "stove", "straw", "string", "swing", "table", "tank", "team", "tent", "test", "toes", "vest", "water", "wing", "winter"
   ]
   //  randomWordGenerator()
-let time = 5000;
+let time = 300000; // 5 minutes
 
 var timerId = setTimeout(function(){
-  console.log("game over")
+  console.log("you win")
 },time)
 
 $("body").on("click","input",function(){
-  console.log("reset timer");
+  console.log("reset timer")
   clearInterval(timerId)
-  time = 10000;
+  time = 300000;
   timerId = setTimeout(function(){
-    console.log("game over");
-  },time)
+    console.log("you win")
+  },time);
 
-})
+});
 
 // $("input").on("click",function(){
 //     time = 5000;
@@ -110,7 +110,7 @@ $("body").on("click","input",function(){
         $(`<div class="letter-box" style="height:calc(99%/${wordArray.length}); min-height:calc(99%/${wordArray.length})"></div>`)
         .append(`<div class="letter">${item}</div>`)
         // .append(`<form action="enterToSubmit()"> <input class="word" type="text" name="word" value="${item}" maxlength="9"> </form>`)
-        .append(` <input class="word" type="text" name="word" autocomplete='off' value="${item.toLowerCase()}" maxlength="9">`)
+        .append(` <input class="word" type="text" name="word" autocomplete='off' placeholder='start with "${item}"' maxlength="9">`)
         .append("<div class='submit-word'>+</div>")
         // .text(`${item}`)
 
