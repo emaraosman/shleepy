@@ -135,7 +135,7 @@ $("body").on("click",".submit-word",function(){
 
   $("body").on("click", ".submit-word", function() {
     wordUp = $(this).prev().val();
-    wordUp.toLowerCase();
+    wordUp = wordUp.toLowerCase();
     submitArray.push(wordUp);
     // submitArray.map(function(item){
     //   wordList.push(sumbitArray);
