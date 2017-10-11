@@ -3,7 +3,7 @@ $(document).ready(function() {
   // Create list of words array to choose from during random word generation sequences
 
 
-  console.log('jq working')
+  // console.log('jq working')
   let submitArray = [];
   let wordUp = "";
   let wordList = [];
@@ -16,13 +16,58 @@ $(document).ready(function() {
     "stew", "stove", "straw", "string", "swing", "table", "tank", "team", "tent", "test", "toes", "vest", "water", "wing", "winter"
   ]
   //  randomWordGenerator()
+let time = 5000;
+
+var timerId = setTimeout(function(){
+  console.log("game over")
+},time)
+
+$("body").on("click","input",function(){
+  console.log("reset timer");
+  clearInterval(timerId)
+  time = 10000;
+  timerId = setTimeout(function(){
+    console.log("game over");
+  },time)
+
+})
+
+// $("input").on("click",function(){
+//     time = 5000;
+// }))else{
+//
+// }
+
+// setInterval(function(){
+//   if($("input").click()){
+//     console.log("stillplaying")
+//     time = 5000;
+//   }else{
+//     console.log("gameover")
+//   }
+//  }, time);
+
+  // setInterval(function(){
+  //   if($("input").is(":focus")){
+  //     console.log('still playing')
+  //     time = 5000
+  //   } else {
+  //     window.alert('hello')
+  //     clearInterval();
+  //   }
+  //   console.log('bbbbbbbb')
+  //  }, time);
+
+
+
+
 
 
 
   //Random word generator function used to fill emply word-lists should they ever appear empty or less than 7
   function randomWordGenerator() {
     let randomWord = starterPack[Math.floor(Math.random() * starterPack.length)];
-    console.log(randomWord);
+    // console.log(randomWord);
     return randomWord;
   }
 
@@ -65,7 +110,7 @@ $(document).ready(function() {
         $(`<div class="letter-box" style="height:calc(99%/${wordArray.length}); min-height:calc(99%/${wordArray.length})"></div>`)
         .append(`<div class="letter">${item}</div>`)
         // .append(`<form action="enterToSubmit()"> <input class="word" type="text" name="word" value="${item}" maxlength="9"> </form>`)
-        .append(` <input class="word" type="text" name="word" value="${item.toLowerCase()}" maxlength="9">`)
+        .append(` <input class="word" type="text" name="word" autocomplete='off' value="${item.toLowerCase()}" maxlength="9">`)
         .append("<div class='submit-word'>+</div>")
         // .text(`${item}`)
 
