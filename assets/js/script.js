@@ -11,7 +11,9 @@ $(document).ready(function() {
   starterPack = ["bat", "bed", "boy", "bun", "can", "cake", "cap", "car", "cat", "cow", "cub", "cup", "dad", "day", "dog", "dust", "fan", "hat", "hen",
     "jar", "kite", "map", "pan", "pet", "pie", "pig", "pot", "rat", "sun", "toe", "tub", "van", "bike", "bird", "chin", "clam", "class", "clover", "club",
     "corn", "crayon", "crow", "crown", "crowd", "crib", "desk", "dime", "dirt", "fang", "field", "flag", "flower",
-    "fog", "game", "heat", "home", "horn", "hose", "joke", "juice", "kite", "lake", "maid", "mask", "mice", "milk", "mint", "meal", "meat", "nest", "nose", "pear", "pen", "plant", "rain", "river", "road", "rock", "room", "rose", "shape", "shoe", "shop", "show", "sink", "snail", "snake", "snow", "soda", "sofa", "star", "step", "stew", "stove", "straw", "string", "swing", "table", "tank", "team", "tent", "test", "toes", "vest", "water", "wing", "winter"
+    "fog", "game", "heat", "home", "horn", "hose", "joke", "juice", "kite", "lake", "maid", "mask", "mice", "milk", "mint", "meal", "meat", "nest", "nose", "pear",
+    "pen", "plant", "rain", "river", "road", "rock", "room", "rose", "shape", "shoe", "shop", "show", "sink", "snail", "snake", "snow", "soda", "sofa", "star", "step",
+    "stew", "stove", "straw", "string", "swing", "table", "tank", "team", "tent", "test", "toes", "vest", "water", "wing", "winter"
   ]
   //  randomWordGenerator()
 
@@ -33,8 +35,10 @@ $(document).ready(function() {
       for (let i = 0; i < (7 - wordCounter); i++) {
         wordList.push(randomWordGenerator());
       }
+      tick = 0
       wordList.forEach(function(item) {
-        $("#word-list-container").append($(`<p class="word-list word1 animated fadeInRight">${item}</p>`))
+        tick++
+        $("#word-list-container").append($(`<p class="word-list word${tick} animated fadeInRight">${item}</p>`))
       });
     }
 // If the submitArray becomes longer than 7 elements we only take the first 7 to submit.
