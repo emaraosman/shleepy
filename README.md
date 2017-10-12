@@ -2,9 +2,13 @@
 An interactive software designed on a conceptual framework and technique for sleep-onset
 acceleration: the somnolent mentation framework adapted from Dr. Luc P. Beaudoin:
 
+Journal/study
+
+A new information-processing approach to sleep-onset acceleration and insomnia exemplified by serial diverse imagining
+
 source: http://summit.sfu.ca/item/12143
 
-User Story: 
+User Story:
 -Presented with welcome screen and welcome button to enter site
 
 -User presses welcome button and enters game screen
@@ -42,4 +46,4 @@ Journal source: http://summit.sfu.ca/item/12143
 
 Cognitive Shuffle explanation: https://mysleepbutton.com/support/do-it-yourself-cognitive-shuffle-sdi/
 
-Related News: http://www.cbc.ca/news/canada/british-columbia/sfu-sleep-trick-luc-beaudoin-1.4092294 
+Related News: http://www.cbc.ca/news/canada/british-columbia/sfu-sleep-trick-luc-beaudoin-1.4092294
