@@ -26,11 +26,11 @@ User Story:
 Structure
 I expect to have a lot of difficulty with the placement of the text on the screen, and getting each letter to move into corresponding positions.
 
-(Write out what challenges you expect to encounter, or ideas you want to come up with)
+UI / UX will be a struggle because of the different size/orientation each new gameboard will have.
 
 Phases of Completion
 
-(The steps or phases you expect to go through, and the tasks that you'll need to accomplish to reach each step. These should resemble the acceptance criteria we were working through earlier.)
+Plan, Draw, WireFrame, Test positioning, create components/functions, compile , Bug fixing.
 
 
 
