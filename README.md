@@ -32,7 +32,7 @@ Phases of Completion
 
 Plan, Draw, WireFrame, Test positioning, create components/functions, compile , Bug fixing.
 
-
+![wireframe](wireframe.png)
 
 
 Links and Resources
