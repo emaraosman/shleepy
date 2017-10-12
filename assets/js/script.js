@@ -23,7 +23,7 @@ $(document).ready(function() {
   //Timer below is set from the start of the page load
   //timer is reset to 5 minutes everytime the submit-word button is pressed.
 
-  let time = 120000; // 2 minutes
+  let time = 60000; // 2 minutes
 
   var timerId = setTimeout(function() {
     console.log("you win")
@@ -33,7 +33,7 @@ $(document).ready(function() {
   $("body").on("click", ".submit-word", function() {
     console.log("reset timer")
     clearInterval(timerId)
-    time = 120000;
+    time = 60000;
     timerId = setTimeout(function() {
       console.log("you win")
       $("#win-screen").fadeIn()
