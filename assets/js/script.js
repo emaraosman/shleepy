@@ -19,9 +19,18 @@ $(document).ready(function() {
 
   ////////////////////////////////////////////
   //TIMER FUNCTIONALITY
-  //
+  //First timer is loss scenario, if it reaches that limit it ends.
   //Timer below is set from the start of the page load
   //timer is reset to 5 minutes everytime the submit-word button is pressed.
+
+  let endTime = 180000
+
+  var endTimerId = setTimeout(function() {
+    console.log("you lose")
+    $("#lose-screen").fadeIn()
+  }, endTime)
+
+
 
   let time = 60000; // 2 minutes
 

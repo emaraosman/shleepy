@@ -83,6 +83,28 @@ header {
   /*text-shadow: 2px 1px white;*/
 }
 
+#lose-screen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display:none;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 4;
+  /*this is highest level z-index*/
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.lose-screen-text {
+  color: rgb(244, 215, 66);
+  text-align: center;
+  font-family: "Modak",cursive;
+  font-size: 50px;
+  padding-top: 70px;
+  animation-delay: 1s;
+  /*text-shadow: 2px 1px white;*/
+}
+
 
 #wait-screen {
   position: absolute;
