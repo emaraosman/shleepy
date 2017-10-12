@@ -89,11 +89,12 @@ header {
   height: 100%;
   width: 100%;
   display:none;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.6);
   z-index: 3;
   /*this is second highest level z-index*/
   padding-top: 100px;
   box-sizing: border-box;
+  animation-delay: .4s;
 }
 
 .wait-screen-text {
@@ -112,7 +113,7 @@ header {
   height: 100%;
   width: 100%;
   display:none;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.6);
   /*box-shadow: inset 26px 0px 20px 0px rgba(0,0,0,0.6);*/
   z-index: 3;
   /*this is second highest level z-index*/

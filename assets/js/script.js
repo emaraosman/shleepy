@@ -73,7 +73,7 @@ $(document).ready(function() {
 
   //Populates wordList variable with array of words to feed word-list-container and create list of words to choose from
   function populateWordList() {
-    $("#word-list-container").append($("<div id='new-list-button'>new list</div>"));
+    $("#word-list-container").append($("<div id='new-list-button' >new list</div>"));
     let wordCounter = wordList.length
     //wordList dynamic populator: this accounts for whether word list is less than 7 but not always 0 or some predefined value
     if (wordList.length < 7) {
@@ -120,7 +120,7 @@ $(document).ready(function() {
       );
 
     });
-    $("#game-board").append("<div id='new-list-button'>new list</div>");
+    $("#game-board").append("<div id='new-list-button' >new list</div>");
   });
 
   //SUBMIT BUTTON:
@@ -135,9 +135,10 @@ $(document).ready(function() {
       submitArray.push(wordUp);
 
       wordList = submitArray;
-
+      $(this).prev().slideUp( 300 ).delay( 500 ).fadeIn( 400 );
+      $(this).slideUp( 300 ).delay( 500 ).fadeIn( 400 );
       $(this).prev().val("");
-      
+
     }
   });
 
